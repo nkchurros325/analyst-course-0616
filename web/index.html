@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>データアナリスト養成講座 — ブラウザ実行版</title>
+  <meta name="description" content="SQL・Python・統計・可視化をブラウザの中だけで学べる、データアナリスト向けの実践教材。" />
+  <!-- 検索エンジンにインデックスさせない（URLを知っている人だけがアクセスできる運用のため） -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ローディング -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <div class="msg" id="loaderMsg">読み込み中…</div>
+    <div class="sub" id="loaderSub">
+      ブラウザの中だけでPythonが動きます（サーバー不要）。初回はライブラリの取得に少し時間がかかります。
+    </div>
+  </div>
+
+  <!-- ヘッダ -->
+  <header class="topbar">
+    <button id="menuBtn" aria-label="メニュー">☰</button>
+    <div class="title">📊 データアナリスト養成講座 <small>ブラウザ実行版</small></div>
+    <div class="spacer"></div>
+    <a class="lite-link" href="lite/" title="既存のJupyterノートブックをそのまま実行（上級者向け）">JupyterLite版 →</a>
+  </header>
+
+  <!-- 本体 -->
+  <div class="layout">
+    <nav class="sidebar" id="sidebar"></nav>
+    <main class="content" id="content"></main>
+  </div>
+  <div id="backdrop"></div>
+
+  <!-- ライブラリ -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

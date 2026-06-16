@@ -1,0 +1,29 @@
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# ノートブック実行時に生成され得る一時的な図など
+*.png
+_*.png
+
+# 注意: data/ は生成済みのサンプルデータ。共有する場合は残し、
+# 各自で作り直す運用にするなら下行のコメントを外す。
+# data/
+
+# ===== ブラウザ実行版（web/）の生成物・中間物 =====
+# JupyterLite用の仮想環境（重いのでコミットしない）
+.venv-lite/
+
+# build_web.py / build_lite.py が生成するもの（CI やローカルで都度生成）
+web/data/
+web/lessons.json
+web/data_manifest.json
+web/lite/
+web/lite_contents/
+
+# 注: web/fonts/jp.ttf（日本語フォント）はローカルですぐ動くようコミットしています。
+#     CIでは scripts/fetch_font.py で取得し直すこともできます。
